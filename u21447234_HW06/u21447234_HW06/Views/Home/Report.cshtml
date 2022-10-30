@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Report";
+}
+<br/>
+<div id="chartContainer"></div>
+
+
+<script type="text/javascript">
+
+	$(function () {
+		var chart = new CanvasJS.Chart("chartContainer", {
+			theme: "light2",
+			animationEnabled: true,
+			title: {
+				text: "Mountain Bike Order Report"
+			},
+			subtitles: [ 
+				{ text: "Number Of Mountain Bikes Sold" }
+			],
+			data: [
+			{
+				type: "column",
+				dataPoints: [
+                    { x: 5, label: "January", y:152},
+                    { x: 10, label: "February", y: 141},
+                    { x: 15, label: "March", y: 190},
+                    { x: 20, label: "April", y: 225},
+                    { x: 25, label: "May", y: 108},
+                    { x: 30, label: "June", y: 109},
+                    { x: 35, label: "July", y: 106},
+                    { x: 40, label: "August", y: 130},
+                    { x: 45, label: "September", y: 121},
+                    { x: 50, label: "October", y: 130},
+                    { x: 55, label: "November", y: 100},
+                    { x: 60, label: "December", y: 103},
+				],
+			}
+			]
+		});
+		chart.render();
+	});
+</script>
